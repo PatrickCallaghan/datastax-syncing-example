@@ -8,7 +8,8 @@ scalaVersion := "2.10.4"
 
 libraryDependencies ++= Seq(
   "org.apache.spark" %% "spark-core" % "1.1.0" % "provided",
-  "com.datastax.spark" %% "spark-cassandra-connector" % "1.1.0" % "provided"
+  "com.datastax.spark" %% "spark-cassandra-connector" % "1.1.0" % "provided",
+  "mysql" % "mysql-connector-java" % "5.1.6" 
 )
 
 libraryDependencies ++= Seq(
@@ -22,7 +23,6 @@ libraryDependencies ++= Seq(
     exclude("commons-collections", "commons-collections").
     exclude("com.esotericsoftware.minlog", "minlog")
 )
-
 	
 assemblyOption in assembly := (assemblyOption in assembly).value.copy(includeScala = false)	
 	
